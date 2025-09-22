@@ -22,36 +22,36 @@ This project includes:
 ```
 radix-abuse-mvp/
 │
-├── backend/                # FastAPI backend code
-│   ├── app/                 # Main backend application
-│   │   ├── api/             # API route files
-│   │   ├── core/            # Core settings and configs
-│   │   ├── models/          # SQLAlchemy database models
-│   │   ├── schemas/         # Pydantic schemas for validation
-│   │   ├── services/        # Business logic & helper services
-│   │   └── main.py          # Entry point for FastAPI app
+├── backend/                
+│   ├── app/                
+│   │   ├── api/             
+│   │   ├── core/            
+│   │   ├── models/          
+│   │   ├── schemas/         
+│   │   ├── services/       
+│   │   └── main.py         
 │   │
-│   ├── migrations/          # Alembic database migration files
+│   ├── migrations/          
 │   │
-│   ├── requirements.txt     # Python dependencies for backend
-│   └── .env.example         # Example environment variables
+│   ├── requirements.txt     
+│   └── .env.example         
 │
-├── frontend/               # React + Vite frontend
-│   ├── src/                 # Frontend source files
-│   │   ├── components/      # Reusable React components
-│   │   ├── pages/           # Page-level React components
-│   │   ├── styles/          # CSS and styling files
-│   │   └── main.jsx         # React entry point
+├── frontend/              
+│   ├── src/                 
+│   │   ├── components/      
+│   │   ├── pages/           
+│   │   ├── styles/        
+│   │   └── main.jsx         
 │   │
-│   ├── public/              # Static assets (favicon, etc.)
-│   └── package.json         # Frontend dependencies
+│   ├── public/           
+│   └── package.json   
 │
-├── docs/                    # Documentation and notes
-│   └── architecture.md      # System architecture details
+├── docs/                   
+│   └── architecture.md      
 │
-├── .gitignore               # Ignored files and folders
-├── README.md                # Project documentation
-└── LICENSE                  # License information
+├── .gitignore               
+├── README.md              
+└── LICENSE         
 ```
 
 ---
