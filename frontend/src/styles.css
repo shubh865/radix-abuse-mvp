@@ -1,0 +1,98 @@
+/* ---- Radix Abuse MVP – Global Styles ---- */
+
+:root{
+  --bg: #0f1115;
+  --panel: #151923;
+  --panel-2: #1a1f2d;
+  --text: #e7eaf0;
+  --text-dim: #a9b0c0;
+  --primary: #7c5cff;      /* violet */
+  --primary-2:#5c3ff0;
+  --success: #22c55e;
+  --warn: #f59e0b;
+  --danger: #ef4444;
+  --border: #262b3a;
+  --badge: #222836;
+  --input: #1b2030;
+  --shadow: 0 10px 25px rgba(0,0,0,.35);
+  --radius: 14px;
+}
+
+*{ box-sizing:border-box }
+html,body,#root{ height:100% }
+body{
+  margin:0;
+  background: radial-gradient(1200px 600px at -10% -10%, #0b0d13 40%, #0f1115 60%) no-repeat,
+              linear-gradient(180deg, #0f1115, #0f1115) no-repeat;
+  color:var(--text);
+  font: 14px/1.6 "Inter", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+}
+
+/* Layout */
+.app-wrap{ max-width:1100px; margin:0 auto; padding:28px 22px 80px }
+.header{
+  display:flex; align-items:center; gap:16px; margin-bottom:22px;
+}
+.h1{
+  font-size:36px; font-weight:800; letter-spacing:.2px; margin:0;
+  background: linear-gradient(90deg, #fff, #bfc6ff);
+  -webkit-background-clip:text; background-clip:text; color:transparent;
+  text-shadow: 0 0 0 rgba(0,0,0,0);
+}
+.api-chip{
+  padding:6px 10px; border-radius:999px; background:var(--badge);
+  border:1px solid var(--border); color:var(--text-dim)
+}
+
+/* Cards / Panels */
+.card{
+  background: linear-gradient(180deg, var(--panel), var(--panel-2));
+  border:1px solid var(--border);
+  border-radius: var(--radius);
+  padding:18px;
+  box-shadow: var(--shadow);
+}
+.section-title{ font-size:20px; font-weight:800; margin:0 0 14px }
+
+/* Inputs */
+.input, .select, .btn, .date{
+  width:100%; background:var(--input); color:var(--text);
+  border:1px solid var(--border); border-radius:10px; padding:10px 12px;
+  outline:none; transition: .15s border-color, .15s box-shadow, .15s transform;
+}
+.input:focus, .select:focus, .date:focus{
+  border-color: #3f50ff; box-shadow: 0 0 0 3px rgba(124,92,255,.12);
+}
+.row{ display:flex; gap:12px; flex-wrap:wrap }
+.col{ flex:1 1 220px }
+
+/* Buttons */
+.btn{
+  background: linear-gradient(180deg, var(--primary), var(--primary-2));
+  border-color: transparent; font-weight:700; cursor:pointer;
+}
+.btn.secondary{ background: transparent; border-color: var(--border) }
+.btn.small{ padding:8px 12px; width:auto }
+.btn:hover{ transform:translateY(-1px) }
+.btn:active{ transform:translateY(0) }
+
+/* Table */
+.table-wrap{ overflow:auto }
+table{ width:100%; border-collapse:collapse; }
+th, td{ padding:12px 10px; border-bottom:1px solid var(--border) }
+th{ text-align:left; color:var(--text-dim); font-weight:700; }
+tr:hover td{ background:#151a24 }
+
+/* Badges */
+.badge{ padding:2px 8px; border-radius:999px; font-weight:700; font-size:12px; display:inline-block }
+.badge.high{ background:rgba(239,68,68,.12); color:#ff6969; border:1px solid rgba(239,68,68,.25) }
+.badge.med{ background:rgba(245,158,11,.12); color:#ffc36b; border:1px solid rgba(245,158,11,.25) }
+.badge.low{  background:rgba(34,197,94,.12); color:#77ffa1; border:1px solid rgba(34,197,94,.25) }
+
+/* Chips / labels */
+.muted{ color:var(--text-dim) }
+.kbd{ font: 12px/1.2 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas; background:#0f1220; border:1px solid var(--border); padding:3px 6px; border-radius:6px }
+
+/* Domain detail */
+.detail-grid{ display:grid; gap:12px; grid-template-columns: 1.2fr .8fr }
+@media (max-width: 980px){ .detail-grid{ grid-template-columns: 1fr } }
