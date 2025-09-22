@@ -18,22 +18,41 @@ This project includes:
 
 ---
 
-## Folder Structure
-
+### Folder Structure
+```
 radix-abuse-mvp/
 │
-├── backend/ # FastAPI backend code
-│ ├── app/ # Main backend application
-│ ├── migrations/ # Alembic migration files
-│ └── requirements.txt
+├── backend/                # FastAPI backend code
+│   ├── app/                 # Main backend application
+│   │   ├── api/             # API route files
+│   │   ├── core/            # Core settings and configs
+│   │   ├── models/          # SQLAlchemy database models
+│   │   ├── schemas/         # Pydantic schemas for validation
+│   │   ├── services/        # Business logic & helper services
+│   │   └── main.py          # Entry point for FastAPI app
+│   │
+│   ├── migrations/          # Alembic database migration files
+│   │
+│   ├── requirements.txt     # Python dependencies for backend
+│   └── .env.example         # Example environment variables
 │
-├── frontend/ # React + Vite frontend
-│ └── src/
+├── frontend/               # React + Vite frontend
+│   ├── src/                 # Frontend source files
+│   │   ├── components/      # Reusable React components
+│   │   ├── pages/           # Page-level React components
+│   │   ├── styles/          # CSS and styling files
+│   │   └── main.jsx         # React entry point
+│   │
+│   ├── public/              # Static assets (favicon, etc.)
+│   └── package.json         # Frontend dependencies
 │
-├── docs/ # Documentation and notes
+├── docs/                    # Documentation and notes
+│   └── architecture.md      # System architecture details
 │
-└── README.md # Project documentation
-
+├── .gitignore               # Ignored files and folders
+├── README.md                # Project documentation
+└── LICENSE                  # License information
+```
 
 ---
 
